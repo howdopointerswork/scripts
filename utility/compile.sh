@@ -2,5 +2,24 @@
 
 read -p "Enter file name (include extension): " FILE
 
-g++ "$FILE"
-./a.out
+
+case "$FILE" in
+	*.cpp)
+		g++ $FILE
+		./a.out
+	;;
+
+	*.py)
+		python3 $FILE
+	;;
+
+	*.java)
+
+		javac $FILE
+		java $FILE
+	;;
+
+	*.html)
+		xdg-open $FILE
+	;;	
+esac		
