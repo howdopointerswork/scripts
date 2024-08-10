@@ -40,8 +40,6 @@ done
 	echo "trust $BLUETOOTH_DEVICE"
 	sleep 5
 	echo "connect $BLUETOOTH_DEVICE"
-	sleep 5
-	echo "quit"
 } | bluetoothctl
 
 spotify &
@@ -49,3 +47,5 @@ spotify &
 sleep 10
 
 playerctl play
+playerctl metadata title
+playerctl metadata artist

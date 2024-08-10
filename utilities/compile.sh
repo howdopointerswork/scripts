@@ -22,4 +22,6 @@ case "$FILE" in
 	*.html)
 		xdg-open $FILE
 	;;	
-esac		
+esac
+#Trying out env variables
+export LAST=$FILE
